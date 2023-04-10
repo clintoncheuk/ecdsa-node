@@ -37,6 +37,11 @@ app.post("/send", async (req, res) => {
     return;
   }
 
+  if (amount <= 0) {
+    res.status(400).send({ message: "Invalid amount" });
+    return;
+  }
+
   if (transactions.find((x) => x.from === sender && x.nonce === nonce)) {
     res
       .status(400)
