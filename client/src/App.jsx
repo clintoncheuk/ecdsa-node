@@ -1,22 +1,21 @@
-import Wallet from "./Wallet";
+import Balance from "./Balance";
 import Transfer from "./Transfer";
+import GenerateWallet from "./GenerateWallet";
 import "./App.scss";
-import { useState } from "react";
 
 function App() {
-  const [balance, setBalance] = useState(0);
-  const [address, setAddress] = useState("");
-
   return (
-    <div className="app">
-      <Wallet
-        balance={balance}
-        setBalance={setBalance}
-        address={address}
-        setAddress={setAddress}
-      />
-      <Transfer setBalance={setBalance} address={address} />
-    </div>
+    <>
+      <div className="app">
+        <div className="row">
+          <GenerateWallet/>
+        </div>
+        <div className="row">
+          <Balance/>
+          <Transfer/>
+        </div>
+      </div>
+    </>
   );
 }
 

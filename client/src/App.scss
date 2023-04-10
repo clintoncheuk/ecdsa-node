@@ -18,13 +18,17 @@ label {
   display: flex;
   max-width: 1400px;
   flex-wrap: wrap;
-  gap: 12px;
   margin: 0 auto;
+
+  .row {
+    width: 100%;
+    display: flex;
+  }
 }
 
 .container {
   flex-grow: 1;
-  margin: 0 20px;
+  margin: 10px;
   background-color: #fff;
   border: 1px solid #cbd5e0;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -62,25 +66,37 @@ input {
   &:hover {
     cursor: pointer;
   }
+
+  &.secondary {
+    background-color: #FFF;
+    color: #319795;
+  }
+}
+
+.generate-wallet {
+  display: flex;
+  flex-direction: column;
 }
 
 .wallet {
   display: flex;
   flex-direction: column;
+  max-width: 50%;
+}
 
-  .balance {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    font-size: .9em;
-    display: inline-flex;
-    margin-top: 10px;
-    padding: 0.75rem;
-    background-color: #f4f6f8;
-  }
+.balance {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: .9em;
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 0.75rem;
+  background-color: #f4f6f8;
 }
 
 .transfer {
   display: flex;
   flex-direction: column;
+  max-width: 50%;
 }
